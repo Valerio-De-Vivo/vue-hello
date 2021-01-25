@@ -20,6 +20,7 @@ input {
   font-size: 30px;
   border: 0;
   border-bottom: 1px solid coral;
+  background-color: transparent;
 }
 
 input:focus {
@@ -35,15 +36,10 @@ button {
   margin: 30px 0;
   border-radius: 30px;
   font-size: 30px;
-  background-color: coral;
+  background-color: black;
   color: white;
   border: 0;
   transition: ease-in-out 0.5s;
-}
-
-button:hover {
-  box-shadow: 1px 1px 5px rgb(152, 152, 152);
-  transform: scale(1.2);
 }
 
 .none {
@@ -52,4 +48,29 @@ button:hover {
 
 .show {
   display: block;
+  color: white;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+.black {
+  background-image: url(https://cdn.pixabay.com/photo/2017/02/08/12/46/moon-2048727_1280.jpg);
+  color: white;
+  transition: ease 2s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: bounce-in 1.3s;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    border-radius: 100%;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    border-radius: 0;
+  }
 }

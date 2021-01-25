@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
-    <div id="container">
-        <input  v-model="nome" type="text" placeholder="Inserisci il tuo nome">
-        <input v-model="cognome" type="text" placeholder="Inserisci il tuo cognome">
+    <div :class="bgc" id="container">
+        <input :class="hide" v-model="nome" type="text" placeholder="Inserisci il tuo nome">
+        <input :class="hide" v-model="cognome" type="text" placeholder="Inserisci il tuo cognome">
 
-        <button @click="stampa">Stampa</button>
+        <button :class="hide" @click="stampa">Stampa</button>
 
-        <h2 :class="display"> {{nome}} {{cognome}} </h2>
+        <h2 :class="display">Ciao {{nome}} {{cognome}} </h2>
 
         
     </div>

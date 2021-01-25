@@ -7,11 +7,21 @@ var app = new Vue({
     data: {
         nome: '',
         cognome: '',
-        display: 'none'
+        display: 'none',
+        bgc:'',
+        hide: '',
     },
     methods: {
         stampa() {
             this.display = 'show';
+            this.bgc = 'black';
+            this.hide = 'none';
+            
         }
     }
 });
+
+var tl = gsap.timeline();
+tl.from("input", {y: -1000, duration: 1, stagger: 1});
+tl.from("button", {y: +500, duration: .5});
+
