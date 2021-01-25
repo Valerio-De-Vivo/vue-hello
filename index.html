@@ -9,9 +9,18 @@
 </head>
 <body>
     
+    <div id="container">
+        <input  v-model="nome" type="text" placeholder="Inserisci il tuo nome">
+        <input v-model="cognome" type="text" placeholder="Inserisci il tuo cognome">
+
+        <button @click="stampa">Stampa</button>
+
+        <h2 :class="display"> {{nome}} {{cognome}} </h2>
+
+        
+    </div>
 
 
-    
 
     <script src="js/script.js"></script>
 </body>
